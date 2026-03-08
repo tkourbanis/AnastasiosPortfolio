@@ -14,7 +14,7 @@ function Footer() {
           </span>
         </div>
         <p className="text-xs text-slate-400 font-mono">
-          © {new Date().getFullYear()} · Built with React &amp; Vite
+          © {new Date().getFullYear()} Anastasios Kourbanis
         </p>
       </div>
     </footer>

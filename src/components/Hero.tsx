@@ -42,7 +42,7 @@ export default function Hero() {
           {/* ── Left: text ── */}
           <motion.div variants={containerVariants} initial="hidden" animate="visible" className="max-w-xl">
 
-            <motion.p variants={itemVariants} className="technical-label mb-6">
+            <motion.p variants={itemVariants} className="technical-label mb-5">
               <span className="inline-flex items-center gap-2">
                 <span className="w-4 h-px bg-blue-700" />
                 Portfolio
@@ -51,36 +51,55 @@ export default function Hero() {
 
             <motion.h1
               variants={itemVariants}
-              className="text-5xl sm:text-6xl lg:text-[64px] font-bold text-slate-900 leading-[1.08] tracking-tight mb-5"
+              className="text-4xl sm:text-5xl lg:text-[64px] font-bold text-slate-900 leading-[1.08] tracking-tight mb-4"
             >
               Anastasios
               <br />
               <span className="text-blue-900">Kourbanis</span>
             </motion.h1>
 
-            <motion.div variants={itemVariants} className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-px bg-blue-900" />
-              <p className="text-lg font-medium text-blue-800 tracking-wide">
+            <motion.div variants={itemVariants} className="flex items-center gap-3 mb-5 pl-3 border-l-2 border-blue-900">
+              <p className="text-base sm:text-lg font-medium text-blue-800 tracking-wide">
                 Mechanical Engineering Student
               </p>
             </motion.div>
 
-            <motion.p variants={itemVariants} className="text-base text-slate-500 leading-relaxed mb-10">
+            {/* Mobile-only photo */}
+            <motion.div
+              variants={itemVariants}
+              className="lg:hidden flex justify-center my-6"
+            >
+              <div className="relative">
+                <span aria-hidden="true" className="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-blue-900/35" />
+                <span aria-hidden="true" className="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-blue-900/35" />
+                <span aria-hidden="true" className="absolute -bottom-2 -left-2 w-4 h-4 border-b-2 border-l-2 border-blue-900/35" />
+                <span aria-hidden="true" className="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-blue-900/35" />
+                <div className="w-36 h-48 sm:w-44 sm:h-56 border-2 border-slate-200 bg-slate-50 overflow-hidden">
+                  <img
+                    src={profileImg}
+                    alt="Anastasios Kourbanis"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.p variants={itemVariants} className="text-sm sm:text-base text-slate-500 leading-relaxed mb-8">
               Passionate about mechanical design, energy systems, and building
               innovative solutions to real-world engineering challenges.
             </motion.p>
 
-            <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-14">
+            <motion.div variants={itemVariants} className="flex flex-wrap gap-3 mb-10">
               <a
                 href="#projects"
-                className="inline-flex items-center gap-2 bg-blue-900 text-white px-6 py-3 text-sm font-semibold hover:bg-blue-800 active:scale-[0.98] transition-all duration-200"
+                className="inline-flex items-center gap-2 bg-blue-900 text-white px-5 py-3 text-sm font-semibold hover:bg-blue-800 active:scale-[0.98] transition-all duration-200"
               >
                 View My Work
-                <HiArrowDown size={15} />
+                <HiArrowDown size={14} />
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 border border-slate-300 text-slate-700 px-6 py-3 text-sm font-semibold hover:border-blue-900 hover:text-blue-900 active:scale-[0.98] transition-all duration-200"
+                className="inline-flex items-center gap-2 border border-slate-300 text-slate-700 px-5 py-3 text-sm font-semibold hover:border-blue-900 hover:text-blue-900 active:scale-[0.98] transition-all duration-200"
               >
                 Get In Touch
               </a>
@@ -89,14 +108,14 @@ export default function Hero() {
             {/* Spec row */}
             <motion.div
               variants={itemVariants}
-              className="grid grid-cols-3 gap-4 border-t border-dashed border-slate-200 pt-7"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-dashed border-slate-200 pt-6"
             >
               {[
                 { label: "Focus Area", value: "Energy Systems & Solid Mechanics" },
                 { label: "Degree",     value: "B.Sc. Mechanical Eng." },
                 { label: "Status",     value: "Open to Opportunities" },
-              ].map((spec) => (
-                <div key={spec.label}>
+              ].map((spec, i) => (
+                <div key={spec.label} className={i < 2 ? "pb-3 sm:pb-0 border-b sm:border-b-0 border-dashed border-slate-100" : ""}>
                   <p className="technical-label mb-1">{spec.label}</p>
                   <p className="text-sm font-medium text-slate-700">{spec.value}</p>
                 </div>
@@ -104,7 +123,7 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* ── Right: photo ── */}
+          {/* ── Right: photo (desktop only) ── */}
           <motion.div
             className="hidden lg:flex items-center justify-center"
             initial={{ opacity: 0, scale: 0.92 }}

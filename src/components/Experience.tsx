@@ -8,7 +8,7 @@ export default function Experience() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="experience" aria-labelledby="experience-heading" className="py-28 bg-white">
+    <section id="experience" aria-labelledby="experience-heading" className="py-16 sm:py-24 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           ref={ref}

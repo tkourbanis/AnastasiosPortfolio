@@ -7,7 +7,7 @@ export default function About() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="about" aria-labelledby="about-heading" className="py-28 bg-white">
+    <section id="about" aria-labelledby="about-heading" className="py-16 sm:py-24 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           ref={ref}
@@ -23,7 +23,7 @@ export default function About() {
             Background &amp; Interests
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-start">
+          <div className="grid md:grid-cols-2 gap-10 lg:gap-20 items-start">
             {/* Left – bio */}
             <div className="space-y-5 text-slate-600 leading-relaxed">
               <p>

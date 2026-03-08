@@ -8,7 +8,7 @@ export default function Projects() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="projects" aria-labelledby="projects-heading" className="py-28 bg-slate-50">
+    <section id="projects" aria-labelledby="projects-heading" className="py-16 sm:py-24 bg-slate-50">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           ref={ref}
@@ -24,8 +24,8 @@ export default function Projects() {
             Selected Work
           </h2>
 
-          <div
-            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+            <div
+            className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
             role="list"
             aria-label="Projects"
           >

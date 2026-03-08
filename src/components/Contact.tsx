@@ -57,7 +57,7 @@ export default function Contact() {
     "w-full px-4 py-3 text-sm border bg-white text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-900/20 focus:border-blue-900 transition-colors duration-150";
 
   return (
-    <section id="contact" aria-labelledby="contact-heading" className="py-28 bg-white">
+    <section id="contact" aria-labelledby="contact-heading" className="py-16 sm:py-24 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           ref={sectionRef}
@@ -73,7 +73,7 @@ export default function Contact() {
             Get In Touch
           </h2>
 
-          <div className="grid md:grid-cols-[1fr_320px] gap-12 lg:gap-20 items-start">
+          <div className="grid md:grid-cols-[1fr_280px] lg:grid-cols-[1fr_320px] gap-10 lg:gap-20 items-start">
             {/* Form */}
             <div className="relative border border-slate-200 p-8 bg-white">
               <span aria-hidden="true" className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-blue-900/35" />
@@ -205,7 +205,7 @@ export default function Contact() {
                     <span className="w-9 h-9 border border-slate-200 flex items-center justify-center group-hover:border-blue-200 group-hover:bg-blue-50 transition-all duration-150">
                       <Icon size={16} />
                     </span>
-                    <span className="font-mono text-xs text-slate-400 group-hover:text-blue-900 transition-colors">{display}</span>
+                    <span className="font-mono text-xs text-slate-400 group-hover:text-blue-900 transition-colors truncate">{display}</span>
                   </a>
                 ))}
               </div>

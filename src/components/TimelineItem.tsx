@@ -24,12 +24,12 @@ export default function TimelineItem({ item, index }: Props) {
         <span className="w-1.5 h-1.5 rounded-full border border-blue-900 block" />
       </div>
 
-      <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
+      <div className="flex flex-col gap-0.5 mb-2">
         <div>
           <h3 className="font-semibold text-slate-900 text-base">{item.role}</h3>
           <p className="text-blue-800 text-sm font-medium">{item.company}</p>
         </div>
-        <span className="text-xs font-mono text-slate-400 shrink-0">{item.dateRange}</span>
+        <span className="text-xs font-mono text-slate-400">{item.dateRange}</span>
       </div>
 
       <p className="text-sm text-slate-500 leading-relaxed mb-3">{item.description}</p>

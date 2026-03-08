@@ -23,7 +23,7 @@ export default function Coursework() {
     : coursework.filter((c: Course) => c.category === activeFilter);
 
   return (
-    <section id="coursework" aria-labelledby="coursework-heading" className="py-28 bg-slate-50">
+    <section id="coursework" aria-labelledby="coursework-heading" className="py-16 sm:py-24 bg-slate-50">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           ref={ref}
@@ -49,7 +49,7 @@ export default function Coursework() {
               <button
                 key={cat}
                 onClick={() => setActiveFilter(cat)}
-                className={`text-xs font-medium px-3 py-1.5 border transition-all duration-150 ${
+                className={`text-xs font-medium px-2.5 py-1.5 border transition-all duration-150 ${
                   activeFilter === cat
                     ? "bg-blue-900 text-white border-blue-900"
                     : "bg-white text-slate-500 border-slate-200 hover:border-blue-900 hover:text-blue-900"
