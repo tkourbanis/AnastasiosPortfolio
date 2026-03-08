@@ -45,7 +45,7 @@ export default function Hero() {
             <motion.p variants={itemVariants} className="technical-label mb-6">
               <span className="inline-flex items-center gap-2">
                 <span className="w-4 h-px bg-blue-700" />
-                Portfolio / v1.0
+                Portfolio
               </span>
             </motion.p>
 
